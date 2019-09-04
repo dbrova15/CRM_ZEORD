@@ -11,7 +11,7 @@ black --check . || add_fail black
 flake8 CRM_ZEORG || add_fail flake8
 #pydocstyle CRM_ZEORG || add_fail pydocstyle
 mypy CRM_ZEORG || add_fail mypy
-#py.test -v tests || add_fail py.test
+py.test -v tests || add_fail py.test
 if [[ ${#FAILURES[@]} -ne 0 ]]; then
     cat <<RESULT
 
